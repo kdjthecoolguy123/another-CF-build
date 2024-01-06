@@ -92,7 +92,7 @@ class StoryMenuState extends MusicBeatState
 		magenta.updateHitbox();
 		magenta.alpha = 0.5;
 		magenta.screenCenter();
-		magenta.visible = false;
+		magenta.visible = true;
 		add(magenta);
 
 		var num:Int = 0;
