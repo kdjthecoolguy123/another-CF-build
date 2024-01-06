@@ -18,6 +18,7 @@ class StoryMenuState extends MusicBeatState
 	public static var weekCompleted:Map<String, Bool> = new Map<String, Bool>();
 
 	var scoreText:FlxText;
+	var magenta:FlxSprite;
 
 	private static var lastDifficultyName:String = '';
 	var curDifficulty:Int = 1;
@@ -83,6 +84,16 @@ class StoryMenuState extends MusicBeatState
 		// Updating Discord Rich Presence
 		DiscordClient.changePresence("In the Menus", null);
 		#end
+
+		magenta = new FlxSprite(-80).loadGraphic(Paths.image('menuBG'));
+		magenta.antialiasing = ClientPrefs.data.antialiasing;
+		magenta.scrollFactor.set(0, yScroll);
+		magenta.setGraphicSize(Std.int(magenta.width * 1.175));
+		magenta.updateHitbox();
+		magenta.alpha = 0.5;
+		magenta.screenCenter();
+		magenta.visible = false;
+		add(magenta);
 
 		var num:Int = 0;
 		for (i in 0...WeekData.weeksList.length)
