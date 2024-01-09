@@ -74,6 +74,7 @@ import states.TitleState;
 	public var badWindow:Int = 135;
 	public var safeFrames:Float = 10;
 	public var guitarHeroSustains:Bool = true;
+	public var naughtie:Bool = false;
 	public var discordRPC:Bool = true;
 }
 
