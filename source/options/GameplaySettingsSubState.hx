@@ -113,7 +113,7 @@ class GameplaySettingsSubState extends BaseOptionsMenu
 			'bool');
 		addOption(option);
 
-		var option:Option = new Option('Naughtyness',
+		var option:Option = new Option('Youtube Kids Edition',
 			"If your mom is in the house and you dont want her to caught you this option is perfect for you",
 			'naughtie',
 			'bool');
